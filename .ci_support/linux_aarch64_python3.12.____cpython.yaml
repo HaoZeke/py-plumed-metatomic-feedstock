@@ -7,8 +7,7 @@ c_stdlib:
 c_stdlib_version:
 - '2.17'
 channel_sources:
-- conda-forge
-- metatensor
+- metatensor,conda-forge
 channel_targets:
 - metatensor main
 docker_image:
