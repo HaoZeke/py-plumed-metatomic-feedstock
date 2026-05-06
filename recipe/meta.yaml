@@ -2,19 +2,19 @@
 
 # update the dev suffix whenever the git_rev changes
 {% set version = "2.10.0" %}
-{% set git_rev = "1a43afbf71be05a367ee87c68b9eee92b6ece3c0" %}
+{% set git_rev = "cb63cf45d4a2e6ed6952de64896a19d58497715f" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/plumed/plumed2.git
+  git_url: https://github.com/lab-cosmo/plumed2.git
   git_rev: {{ git_rev }}
   depth: 1
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or py2k]
   string: py{{ CONDA_PY }}_h{{ PKG_HASH }}_git.{{ git_rev[:7] }}_{{ PKG_BUILDNUM }}
 
